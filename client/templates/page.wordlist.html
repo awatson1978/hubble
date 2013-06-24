@@ -1,0 +1,82 @@
+<template name="wordlistDatasetTemplate">
+    <div id="wordlistDatasetPage" class="page">
+        <div class="container  doesnt-overlap-header">
+                {{> wordlistFormTemplate }}
+                {{> wordlistIndexTemplate }}
+        </div>
+    </div>
+</template>
+
+<template name="wordlistIndexTemplate">
+    <div class="padded">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <input id="wordlistSearchInput" type="text" placeholder="Filter..."></input>
+            </div>
+            <ul class="horizontal centered row show-grid">
+                {{#each fryWordList}}
+                {{> wordlistListItemTemplate }}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>
+<template name="wordlistListItemTemplate">
+    <li class="col col-lg-2 list-group-item">{{ Word }}</li>
+</template>
+
+
+
+
+<template name="wordlistFormTemplate">
+    <div class="padded">
+        {{#if word}}
+            {{#with word}}
+                <div class="panel panel-info">
+                    <div class="panel-heading padded">
+                        <bold>Word ID:</bold> {{_id}}
+                    </div>
+                    <div class="word-form">
+                        <input id="wordInput" type="text" placeholder="spelling..." value="{{Word}}" {{word_enabled}}></input>
+                        <label class="smallgray" for="wordInput">Spelling</label>
+                    </div>
+                    {{#if isNewWord}}
+                        <div class="spacer row"></div>
+                        <div class="container">
+                            <div class="col col-lg-12">
+                                <button id="newWordButton" type="button" class="fullwidth btn btn-info" width="100%">Create New Word!</button>
+                            </div>
+                        </div>
+                    {{/if}}
+
+                    {{#if isDeletingWord}}
+                    <div class="spacer row"></div>
+
+                        <div class="alert alert-danger with-top-spacer">
+                            <div class="container">
+                                <div class="col col-lg-6">
+                                    <button id="deleteWordButton" type="button" class="fullwidth btn btn-danger">Delete This Word</button>
+                                </div>
+                                <div class="col col-lg-6">
+                                    <button id="cancelDeleteWordButton" type="button" class="fullwidth btn btn-danger">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+
+                </div>
+            {{/with}}
+        {{else}}
+            <div class="panel panel-info">
+                <div class="panel-heading padded">
+                    <bold>Word ID:</bold> ...
+                </div>
+                <div class="centered dictionary-form">
+                    <h2>Select a word to edit.</h2>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</template>
+
+

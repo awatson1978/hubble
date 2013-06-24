@@ -1,0 +1,349 @@
+
+
+//-----------------------------------------
+// Animations
+
+.smooth {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+//-----------------------------------------
+// Clicking
+
+.clickable{
+  cursor: pointer;
+}
+.unselectable{
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//-----------------------------------------
+// Page Layout
+
+.page{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+//-----------------------------------------
+// Padding
+
+.padded{
+    box-sizing: border-box;
+    padding: 16px;
+}
+.padded-horizontal, .with-horizontal-padding, .horizontally-padded{
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.padded-vertical, .with-vertical-padding, .vertically-padded{
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.without-padding, .nopadding, .no-padding, .unpadded{
+  padding: 0px;
+}
+.without-right-padding{
+  padding-right: 0px !important;
+}
+.without-left-padding{
+  padding-left: 0px !important;
+}
+.without-top-padding{
+  padding-top: 0px !important;
+}
+.without-bottom-padding{
+  padding-bottom: 0px !important;
+}
+
+.margined, .with-margins{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.with-bottom-padding{
+  padding-bottom: 20px !important;
+}
+.with-bottom-spacer{
+  margin-bottom: 20px;
+}
+.with-top-spacer, .with-top-padding{
+  padding-top:20px !important;
+}
+.with-right-padding{
+  padding-right: 20px !important;
+}
+.with-left-padding{
+  padding-left: 20px !important;
+}
+
+.doesnt-overlap-header{
+  padding-top: 50px;
+}
+.doesnt-overlap-footer{
+  padding-bottom: 50px;
+}
+
+
+//-----------------------------------------
+// Lists
+
+ul.horizontal{
+  display: inline;
+  margin: 0px;
+  li{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+  }
+}
+#main-scroller li{
+  display: inline;
+  padding-right: 20px;
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+
+
+
+//-----------------------------------------
+// Colors
+
+.gray-line{
+  border: 1px solid lightgray;
+}
+
+//-----------------------------------------
+// Container Types
+
+
+.dotted{
+    border-style: dotted;
+    border-width: 2px;
+    border-color: lightgray;
+}
+.panel_container{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+}
+.spacer{
+  height: 20px;
+}
+
+.pre{
+  line-height: 1 !important;
+}
+
+
+
+
+//-------------------------------------
+
+.column-container{
+  width: 100%;
+}
+.column-one-of-two{
+  width: 50%;
+  position: relative;
+  float: left;
+  padding-left: 5px;
+  padding-right: 2.5px;
+}
+.column-two-of-two{
+  width: 50%;
+  position: relative;
+  float: left;
+  padding-left: 2.5px;
+  padding-right: 5px;
+}
+
+//-------------------------------------
+// SIZING
+
+.fullwidth{
+  width: 100%;
+}
+.fullheight{
+  height: 100%;
+}
+
+//-------------------------------------
+// ANCHORING
+
+.bottom-anchored{
+  position: fixed;
+  bottom: 50px;
+}
+.bottom-anchor{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+.top-anchored{
+  position: fixed;
+  top: 60px;
+}
+.well-behaved{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.absolute-layout{
+  position:absolute;
+}
+.fixed-layout{
+  position: fixed;
+}
+.left-anchored{
+  position: fixed;
+  left: 0px;
+}
+.right-anchored{
+  position: fixed;
+  right: 0px;
+}
+.float-right{
+  position: absolute;
+  float: right;
+  right: 0px;
+}
+
+
+
+//------------------------------------
+// VISIBILITY
+
+.hidden{
+  visibility: hidden;
+  display: none;
+}
+
+
+
+
+
+//------------------------------------
+// TEXT
+
+.plain, .plain:hover, .plain:active, .plain:visited{
+  text-decoration: none !important;
+  color: none !important;
+  border: none !important;
+}
+
+.bold{
+  font-weight: bold;
+}
+.centered{
+  text-align: center;
+}
+.strikeout{
+  text-decoration: line-through;
+  color: lightgray !important;
+}
+.justified{
+  text-align: justify;
+}
+.teletype{
+  font-size: 1em;
+  line-height: 1;
+  font-family: monospace, serif;
+  color: black;
+  text-decoration: none;
+  text-align: left;
+}
+.teletype:hover, .code:visited, code:active{
+  text-decoration: none;
+}
+.code{
+  background-color: #f5f5f5;
+}
+.text{
+  color: forestgreen;
+  padding-left: 10px;
+}
+.field{
+  color: darksalmon;
+  margin-left: 20px;
+  padding-right: 10px;
+}
+
+//------------------------------------
+// MISCELLANEOUS
+
+
+.gray-border{
+  border: 1px solid lightgray;
+}
+@corner-radius: .4em;
+.with-rounded-corners {
+  -moz-border-radius: 				@corner-radius /*{global-radii-blocks}*/;
+  -webkit-border-radius: 				@corner-radius /*{global-radii-blocks}*/;
+  border-radius: 						@corner-radius /*{global-radii-blocks}*/;
+}
+
+.reference{
+  position: relative;
+}
+.close{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 1.8em;
+  top: -2px;
+}
+.close:hover{
+  color: red;
+  cursor: pointer;
+}
+
+
+
+.slide-tab{
+  width: 200px;
+  top: 60px;
+}
+.sidebar{
+  width: 274px;
+  opacity: 0.9;
+}
+
+.no-background{
+  background-color: none;
+}
+
+
+//-----------------------------
+// zoetrope
+
+.zoetrope{
+  position: absolute;
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+.zoetrope li{
+  padding-right: 40px;
+  padding-top: 20px;
+}
+

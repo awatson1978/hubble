@@ -1,0 +1,96 @@
+<template name="dictionaryDatasetTemplate">
+    <div id="dictionaryDatasetPage" class="page">
+        <div class="container doesnt-overlap-header">
+            <!--<div id="sidebarPanel" class="col col-lg-3">-->
+                {{> dictionaryFormTemplate }}
+                {{> dictionaryIndexTemplate }}
+            <!--</div>-->
+            <!--<div id="formPanel" class="col col-lg-9 unpadded">-->
+            <!--</div>-->
+        </div>
+    </div>
+</template>
+
+<template name="dictionaryIndexTemplate">
+    <div class="padded">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <input id="dictionarySearchInput" type="text" placeholder="Filter..." value="life"></input>
+            </div>
+            <ul class="list-group">
+                {{#each dictionaryList}}
+                {{> dictionaryItemTemplate }}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>
+<template name="dictionaryItemTemplate">
+    <li class="list-group-item"><span class="bold">{{ Word }}</span>  {{Definition}}</li>
+</template>
+
+
+
+
+<template name="dictionaryFormTemplate">
+    <div class="padded">
+        {{#if word}}
+            {{#with word}}
+                <div class="panel panel-info">
+                    <div class="panel-heading padded">
+                        <bold>Dictionary Entry ID:</bold> {{_id}}
+                    </div>
+                    <div class="dictionary-form">
+                        <div class="col col-lg-3">
+                            <input id="dictionaryWordInput" type="text" placeholder="spelling..." value="{{Word}}" {{word_enabled}}></input>
+                            <label class="smallgray" for="dictionaryWordInput">Word</label>
+                        </div>
+                        <div class="col col-lg-9">
+                            <input id="dictionaryDefinitionInput" type="text" placeholder="spelling..." value="{{Definition}}" {{definition_enabled}}></input>
+                            <label class="smallgray" for="dictionaryDefinitionInput">Definition</label>
+                        </div>
+                    </div>
+
+                    {{#if isNewWord}}
+                        <div class="spacer row"></div>
+                        <div class="container">
+                            <div class="col col-lg-12">
+                                <button id="newDictionaryWordButton" type="button" class="fullwidth btn btn-info" width="100%">Create New Word!</button>
+                            </div>
+                        </div>
+                    {{/if}}
+
+                    {{#if isDeletingWord}}
+                        <div class="padded container">
+                            <div class="alert alert-danger">
+                                <h4 class="centered">Are you sure you want to delete this record?</h4>
+                                <div class="container">
+                                    <div class="col col-lg-6">
+                                        <button id="deleteDictionaryWordButton" type="button" class="fullwidth btn btn-danger">Delete</button>
+                                    </div>
+                                    <div class="col col-lg-6">
+                                        <button id="cancelDeleteDictionaryWordButton" type="button" class="fullwidth btn btn-danger">Cancel</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {{/if}}
+                </div>
+            {{/with}}
+        {{else}}
+        <div class="panel panel-info">
+            <div class="panel-heading padded">
+                <bold>Dictionary Entry ID:</bold> ...
+            </div>
+            <div class="centered dictionary-form">
+                <h4>Select a dictionary entry to edit.</h4>
+            </div>
+            <!--<div class="dictionary-form">-->
+                <!--<input type="text" placeholder="Select a word." value="Select a word."></input>-->
+            <!--</div>-->
+        </div>
+        {{/if}}
+    </div>
+</template>
+

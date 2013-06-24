@@ -1,0 +1,51 @@
+// consistent layout
+//#samplePage {
+//  .foo {
+//    color: lightgray;
+//  }
+//}
+
+// mobile phone layout
+.navbar-fixed-bottom{
+  ul li{
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #sidebarPanel {
+    padding: 0px;
+    .padded {
+      padding: 0px;
+    }
+  }
+}
+
+// portrait orientation
+@media only screen and (max-width: 768px) {
+  #sidebarPanel {
+    padding: 0px;
+    .padded {
+      padding: 0px;
+    }
+  }
+  .customer-form{
+    height: 840px;
+    padding-top: 40px;
+  }
+  .dowjones-form{
+    height: 440px;
+    padding-top: 40px;
+  }
+  .dictionary-form{
+    height: 100px;
+  }
+  #formPanel .padded{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+// landscape orientation
+@media only screen and (min-width: 768px) {
+}

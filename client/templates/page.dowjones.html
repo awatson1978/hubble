@@ -1,0 +1,109 @@
+<!-- //TODO:  rename dowjonesDatasetTemplate to dowJonesPage -->
+<template name="dowjonesDatasetTemplate">
+    <div id="dowjonesDatasetPage" class="page">
+        <div class="container doesnt-overlap-header">
+            <div id="sidebarPanel" class="col col-lg-3">
+                {{> dowjonesIndexTemplate }}
+            </div>
+            <div id="formPanel" class="col col-lg-9 unpadded">
+                {{> dowjonesFormTemplate }}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="dowjonesIndexTemplate">
+    <div class="padded">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <input id="daySummarySearchInput" type="text" placeholder="Filter..."></input>
+            </div>
+            <ul class="list-group">
+                {{#each daySummaryList}}
+                {{> daySummaryItemTemplate }}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+
+</template>
+<template name="daySummaryItemTemplate">
+     <li class="list-group-item">{{Date}}</li>
+</template>
+
+<template name="dowjonesFormTemplate">
+    {{#if record}}
+        {{#with record}}
+        <div class="padded">
+            <div class="panel panel-info">
+                <div class="panel-heading padded">
+                    <bold>Customer ID:</bold> {{_id}}
+                </div>
+                <div class="dowjones-form">
+                    <!-- don't add with-bottom-padding to the first column, so it displays on mobile correctly -->
+                    <div class="col col-lg-6">
+                        <input id="dateInput" type="text" placeholder="Date" value="{{Date}}" {{date_enabled}}></input>
+                        <label class="smallgray" for="dateInput">Date</label>
+
+                        <input id="openInput" type="text" placeholder="Open" value="{{Open}}"  {{open_enabled}}></input>
+                        <label class="smallgray" for="openInput">Open</label>
+
+                        <input id="highInput" type="text" placeholder="High" value="{{High}}"  {{high_enabled}}></input>
+                        <label class="smallgray" for="highInput">High</label>
+                    </div>
+                    <div class="col col-lg-6">
+                        <input id="volumeInput" type="text" placeholder="Volume" value="{{Volume}}"  {{volume_enabled}}></input>
+                        <label class="smallgray" for="volumeInput">Volume</label>
+
+                        <input id="lowInput" type="text" placeholder="Low" value="{{Low}}"  {{low_enabled}}></input>
+                        <label class="smallgray" for="lowInput">Low</label>
+
+                        <input id="closeInput" type="text" placeholder="Close" value="{{Close}}"  {{close_enabled}}></input>
+                        <label class="smallgray" for="closeInput">Close</label>
+
+                    </div>
+                </div>
+
+                {{#if isNewMarketSummary}}
+                <div class="spacer row"></div>
+                <div class="container">
+                    <div class="col col-lg-12">
+                        <button id="newMarketSummaryButton" type="button" class="fullwidth btn btn-info" width="100%">Create New Record!</button>
+                    </div>
+                </div>
+                {{/if}}
+
+                {{#if isDeletingMarketSummary}}
+                <div class="padded container">
+                    <div class="alert alert-danger">
+                        <h4 class="centered">Are you sure you want to delete this record?</h4>
+                        <div class="container">
+                            <div class="col col-lg-6">
+                                <button id="deleteSummaryButton" type="button" class="fullwidth btn btn-danger">Delete</button>
+                            </div>
+                            <div class="col col-lg-6">
+                                <button id="cancelDeleteSummaryButton" type="button" class="fullwidth btn btn-danger">Cancel</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+        {{/with}}
+    {{else}}
+    <div class="padded">
+        <div class="panel panel-info">
+            <div class="panel-heading padded">
+                <bold>Customer ID:</bold> ...
+            </div>
+            <div class="centered padded dowjones-form">
+                <h2>Select a record.</h2>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</template>
+

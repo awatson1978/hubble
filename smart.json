@@ -1,0 +1,27 @@
+{
+  "packages": {
+    "router": {},
+    "device-detection": {},
+    "moment": {},
+      "dataset-dictionary": {
+          "git": "https://github.com/awatson1978/dataset-dictionary.git",
+          "tag": "v0.1.2",
+          "commit": "7f123d911f19cf5b8c53bf809ca5b129019ad152"
+      },
+      "dataset-dowjones": {
+          "git": "https://github.com/awatson1978/dataset-dowjones.git",
+          "tag": "v0.1.2",
+          "commit": "c07bbf91de7110b242ee8b27723934cad549a7b2"
+      },
+      "dataset-wordlist": {
+          "git": "https://github.com/awatson1978/dataset-wordlist.git",
+          "tag": "v0.1.16",
+          "commit": "d4b9f751564dfef5dd5d06b680a9db473b92fc65"
+      },
+      "dataset-customers": {
+          "git": "https://github.com/awatson1978/dataset-customers.git",
+          "tag": "v0.1.2",
+          "commit": "016fea2b69c0bac021b021fa97441941c15dc4c4"
+      }
+  }
+}
