@@ -51,13 +51,14 @@ Template.customersListItemTemplate.events({
 //-------------------------------------------------------------
 // D.  Edit Form Helper
 
-Template.dowjonesFormTemplate.helpers({
-    record: function(){
+
+Template.customerFormTemplate.helpers({
+    user: function(){
         try{
             if(Session.get('current_action') == 'new'){
-                return {"Date":"","Open":"","High":"","Low":"","Close":"","Volume":""};
+                return {"FirstName":"","LastName":"","Company":"","Address":"","City":"","County":"","State":"","ZIP":"","Phone":"","Fax":"","Email":"","Web":""};
             }else{
-                return DowJones.findOne(Session.get('selected_date'));
+                return CustomerAccounts.findOne(Session.get('selected_user'));
             }
         }catch(error){
             console.log(error);
