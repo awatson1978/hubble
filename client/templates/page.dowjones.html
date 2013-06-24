@@ -20,17 +20,15 @@
             </div>
             <ul class="list-group">
                 {{#each daySummaryList}}
-                {{> daySummaryItemTemplate }}
+                    <li class="list-group-item">{{Date}}</li>
                 {{/each}}
             </ul>
         </div>
     </div>
-
-
 </template>
-<template name="daySummaryItemTemplate">
-     <li class="list-group-item">{{Date}}</li>
-</template>
+<!--<template name="daySummaryItemTemplate">-->
+     <!--<li class="list-group-item">{{Date}}</li>-->
+<!--</template>-->
 
 <template name="dowjonesFormTemplate">
     {{#if record}}

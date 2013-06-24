@@ -7,7 +7,7 @@ Session.set('is_deleting_record', false);
 Template.dowjonesIndexTemplate.daySummaryList = function(){
     try{
         return DowJones.find({
-                'Date': { $regex: Session.get('day_summary_search'), $options: 'i' }
+            'Date': { $regex: Session.get('day_summary_search'), $options: 'i' }
         },{limit: 20});
     }catch(error){
         console.log(error);
