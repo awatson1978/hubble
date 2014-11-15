@@ -1,6 +1,6 @@
 ##hubble
 
-A Meteor site that contains sample CRUD applets, using the dataset-* meteorite packages.
+A Meteor site that contains sample CRUD applets and dataset packages.
 
 ===============================
 #### Installation
