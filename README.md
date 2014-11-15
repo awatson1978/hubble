@@ -2,6 +2,7 @@
 
 A Meteor site that contains sample CRUD applets and dataset packages.
 
+
 ===============================
 #### Installation
 
@@ -13,6 +14,14 @@ git clone https://github.com/awatson1978/hubble.git
 cd hubble
 meteor
 ````
+
+===============================
+#### Datasets  
+
+- **Customers** - A collection of 500 sample customers, with name, address, phone, zip, email, etc.
+- **Dictionary** - A circa ~1920 Mariam Webster's Dictionary with ~70,000 entries.  
+- **Wordlist** - List of 100 most common words people use.
+- **Dow Jones** - 20 years worth of Dow Jones Index summaries.
 
 ===============================
 #### Licensing
