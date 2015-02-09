@@ -1,0 +1,10 @@
+<template name="mainLayout">
+  {{> navbarHeader }}
+
+  <div id="mainPanel" class="fullheight padded">
+    {{> yield }}
+  </div>
+  {{> thumbMenu }}
+  {{> navbarFooter }}
+  <div class="hidden resize-trigger">resized: {{resized}}</div>
+</template>

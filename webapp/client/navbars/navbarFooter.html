@@ -1,0 +1,28 @@
+<template name="navbarFooter">
+  <footer id="navbarFooter">
+    <nav id="navbarFooterNav" class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container-fluid">
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          {{#if isVisible }}
+          <ul class="nav navbar-nav">
+            <li class="view-button"><a href="">Vew</a>
+            </li>
+            <li class="new-button"><a href="">New</a>
+            </li>
+            <li class="edit-button"><a href="">Edit</a>
+            </li>
+            <li class="delete-button"><a href="">Delete</a>
+            </li>
+          </ul>
+          {{/if}}
+
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/awatson1978/hubble"><i class="fa fa-github"></i>Get the source code!</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+  </footer>
+</template>

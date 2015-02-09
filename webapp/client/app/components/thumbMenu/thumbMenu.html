@@ -1,0 +1,18 @@
+<template name="thumbMenu">
+  {{#if isVisible}}
+  <ul id="thumbMenu" class="horizontal unstyled right hidden-sm">
+    <li class="{{isDictionaryPage}} dictionary-button active">
+      <img src="images/dictionary.jpg" class="thumb-image img-circle" />
+    </li>
+    <li class="{{isWordlistPage}} wordlist-button">
+      <img src="images/wordlist.jpg" class="thumb-image img-circle" />
+    </li>
+    <li class="{{isCustomersPage}} customers-button">
+      <img src="images/customers.jpg" class="thumb-image img-circle" />
+    </li>
+    <li class="{{isDowJonesPage}} dowjones-button">
+      <img src="images/dowjones.jpg" class="thumb-image img-circle" />
+    </li>
+  </ul>
+  {{/if}}
+</template>
