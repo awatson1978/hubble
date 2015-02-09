@@ -106,7 +106,7 @@ Template.homePage.events({
 //-----------------------------------------------------
 // NAVBARS
 
-Template.navbarFooterTemplate.isVisible = function(){
+Template.navbarFooter.isVisible = function(){
     if(Session.get('currentDataset')){
         return true;
     }else{
